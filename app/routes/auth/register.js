@@ -9,7 +9,7 @@ export default Ember.Route.extend({
       this.get('currentModel').save()
         .then(() => {
           this.transitionTo('auth.login');
-        })
+        });
     }
   }
 });
