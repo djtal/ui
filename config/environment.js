@@ -17,6 +17,10 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
+    DS: {
+      host: 'http://localhost:4000',
+      namespace: 'api'
+    },
     sassOptions: {
       includePaths: ['bower_components/materialize/sass']
     },
@@ -43,7 +47,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.DS.host = 'https://enigmatic-sands-80980.herokuapp.com/';
   }
 
   return ENV;
