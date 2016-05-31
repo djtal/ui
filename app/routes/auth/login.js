@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({
+const { Route, inject } = Ember;
+
+export default Route.extend({
+  session: inject.service(),
   actions: {
     doLogin() {
       const user = this.get('currentModel');
